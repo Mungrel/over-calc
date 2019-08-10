@@ -1,0 +1,14 @@
+:root {
+    --drawer-width: 220px;
+}
+
+.nav-drawer {
+    width: var(--drawer-width);
+}
+
+.content {
+    width: calc(100% - var(--drawer-width));
+    padding-left: var(--drawer-width);
+    margin-left: 30px;
+    margin-top: 30px;
+}
