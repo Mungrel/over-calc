@@ -1,5 +1,5 @@
-## Overengineered Calculator
+## over-calc
 
-An abomination of overengineering.
+A massively over-engineered calculator.
 
-A calculator backed by an REST API and MySQL for no real reason.
+A calculator backed by a REST API and MySQL for no real reason.
