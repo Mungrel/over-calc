@@ -1,5 +1,4 @@
 import config from './config'
-import { fetchApi } from './api';
 
 interface User {
     id: string,
@@ -33,7 +32,8 @@ const signUp = (username: string, password: string): Promise<User> => {
         body: JSON.stringify({ username, password })
     };
 
-    return fetchApi('/sign_up', requestOptions)
+    return fetch(`${config.apiUrl}/sign_up`, requestOptions)
+        .then(handleSignInResponse)
         .then(user => {
             localStorage.setItem('user', JSON.stringify(user));
             return user;

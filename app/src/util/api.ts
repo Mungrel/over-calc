@@ -3,7 +3,7 @@ import { userService } from './user-service';
 
 export async function fetchApi(path: string, options: RequestInit): Promise<any> {
     const userItem = localStorage.getItem('user');
-    if (!userItem) {
+    if (userItem == null) {
         userService.logout();
         return;
     }

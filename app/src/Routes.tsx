@@ -4,14 +4,19 @@ import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
 import NotFound from './pages/NotFound'
 import Calc from './pages/Calc';
+import NavDrawer from './components/NavDrawer';
 
 const Routes: React.FC = () => {
     return (
         <Switch>
             <Route exact path="/sign_up" component={SignUp} />
             <Route exact path="/sign_in" component={SignIn} />
-            <Route exact path="/calc" component={Calc} />
-            <Route component={NotFound} />
+            <NavDrawer>
+                <Route exact path="/calc" component={Calc} />
+            </NavDrawer>
+            <NavDrawer>
+                <Route component={NotFound} />
+            </NavDrawer>
         </Switch>
     )
 }
